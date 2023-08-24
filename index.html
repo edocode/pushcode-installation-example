@@ -23,6 +23,26 @@
             font-weight: bold;
         }
     </style>
+    
+    <script defer src="https://www.pushcode.jp/dist/js/pushcode.js"></script>
+<link rel="manifest" href="/manifest.json">
+<script>
+window.PushCodeInit = function() {
+  try {
+    if (PushCode && PushCode.isSupport()) {
+      PushCode.init({ domainToken: '4801a52d912b406a237faa68eefb03fc905c6d51c66d2a98a5a091b9a086b223', userid: '' });
+        PushCode.components.openSubscribeDialog();
+    }
+  }
+  catch (err) {
+    console.error(err);
+    if (PushCode) {
+      PushCode.sendError(err);
+    }
+  }
+};
+</script>
+
 </head>
 
 <body>
